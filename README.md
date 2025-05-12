@@ -110,6 +110,30 @@ Obtener una película por ID.
 
 ---
 
+#### PUT `/api/pelicula/:id`
+Actualizar una película por su ID.
+
+- Método: `PUT`
+- URL: `http://localhost:3000/api/pelicula/6821519281bd433dce8f5e4c`
+- Body (JSON):
+```json
+{
+  "nombre": "Star Wars: The Empire Strikes Back",
+  "generos": ["Ciencia ficción", "Aventura", "Drama"],
+  "anioEstreno": 1980
+}
+```
+
+---
+
+#### DELETE `/api/pelicula/:id`
+Eliminar una película por su ID.
+
+- Método: `DELETE`
+- URL: `http://localhost:3000/api/pelicula/6821519281bd433dce8f5e4c`
+
+---
+
 ### 🎭 Actores
 
 #### POST `/api/actor`
@@ -155,6 +179,12 @@ Obtener todos los actores que pertenecen a una película.
 - Ejemplo: `http://localhost:3000/api/actor/pelicula/6821519281bd433dce8f5e4c`
 
 > <img src="img/get-actores-by-pelicula.png">
+
+---
+
+#### PUT & DELETE (no implementados)
+Este proyecto contempla solo lectura e inserción de actores.  
+La edición o eliminación de actores podría ser implementada en versiones futuras.
 
 ---
 
