@@ -88,8 +88,6 @@ Agregar una nueva película.
 }
 ```
 
-> <img src="img/post-pelicula.png">
-
 ---
 
 #### GET `/api/peliculas`
