@@ -180,12 +180,6 @@ Obtener todos los actores que pertenecen a una película.
 
 ---
 
-#### PUT & DELETE (no implementados)
-Este proyecto contempla solo lectura e inserción de actores.  
-La edición o eliminación de actores podría ser implementada en versiones futuras.
-
----
-
 ## 📌 Consideraciones adicionales
 
 - El servidor no se inicia si no se logra conexión con MongoDB Atlas.
