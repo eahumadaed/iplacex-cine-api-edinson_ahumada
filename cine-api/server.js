@@ -20,6 +20,9 @@ app.get("/", (req, res) => {
     res.send("Bienvenido al cine en Iplacex");
 });
 
+app.get("/debug", (req, res) => {
+    res.send("Ruta debug activa");
+});
 
 // Conexión a MongoDB
 try {

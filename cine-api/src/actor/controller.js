@@ -10,13 +10,15 @@ export async function handleInsertActorRequest(req, res) {
     const data = Actor(req.body);
 
     try {
-        const pelicula = await db.collection("peliculas").findOne({ nombre: data.idPelicula });
+        const pelicula = await db.collection("peliculas").findOne({ nombre: data.nombrePelicula });
 
         if (!pelicula) {
             return res.status(404).json({ error: "Película no encontrada para asignar al actor" });
         }
 
         data.idPelicula = pelicula._id.toString();
+        delete data.nombrePelicula;
+
 
         const result = await db.collection(COLLECTION).insertOne(data);
         res.status(201).json(result);
